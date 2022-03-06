@@ -12,7 +12,9 @@ class GymEnquetesController < ApplicationController
 
   # GET /gym_enquetes/new
   def new
-    @gym_enquete = GymEnquete.new
+    # スポーツジムに関するアンケートのページを取り下げて、アクセスできないように変更
+    # @gym_enquete = GymEnquete.new
+    render file: "#{Rails.root}/public/404.html", layout: false, status: 404
   end
 
   # GET /gym_enquetes/1/edit
